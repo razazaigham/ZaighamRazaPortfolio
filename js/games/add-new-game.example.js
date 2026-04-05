@@ -3,7 +3,9 @@
  * 1. Copy this file to js/games/your-game-slug.js (remove .example from the name).
  * 2. Fill in title, description, image, playUrl, linkLabel, role, tech.
  * 3. Add <script src="js/games/your-game-slug.js"></script> in index.html
- *    after js/games/init.js and with other game scripts (order = display order).
+ *    after js/games/init.js and with other game scripts.
+ * Optional: set `order` (number) on the object — lower = earlier in the grid
+ * and quick-access strip (see init.js).
  *
  * linkLabel: "Google Play" or "App Store" (or "Play" for web builds).
  * published: true with a real playUrl shows the store link; false shows "In development".
@@ -20,5 +22,6 @@
     linkLabel: "Google Play",
     role: "Game developer",
     tech: "Unity",
+    // order: 10,
   });
 })();

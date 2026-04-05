@@ -1,7 +1,10 @@
 (function () {
   var track = document.getElementById("project-strip-track");
   var section = document.querySelector(".project-strip-section");
-  var games = window.GAMES || [];
+  var games =
+    typeof window.getGamesSorted === "function"
+      ? window.getGamesSorted()
+      : window.GAMES || [];
   if (!track || !section) return;
 
   var count = 0;

@@ -2,6 +2,7 @@
  * OFFLINE COLLECTION CARD
  * Copy to collection-your-name.js, add <script src="js/collections/collection-your-name.js"></script>
  * in index.html after other games/collections (before projects-strip.js).
+ * Optional `order` (number): lower = earlier (see init.js).
  *
  * isCollection: true + collectionItems[] shows list on hover; no store link.
  */
@@ -17,5 +18,6 @@
     collectionItems: ["Game One", "Game Two"],
     role: "Optional",
     tech: "Optional",
+    // order: 20,
   });
 })();

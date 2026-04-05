@@ -3,7 +3,10 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  var games = window.GAMES || [];
+  var games =
+    typeof window.getGamesSorted === "function"
+      ? window.getGamesSorted()
+      : window.GAMES || [];
   if (!grid || !games.length) return;
 
   games.forEach(function (g) {

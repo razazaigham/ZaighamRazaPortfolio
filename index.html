@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Fix relative URLs on GitHub Pages project sites (e.g. /repo vs /repo/) -->
+    <script>
+      (function () {
+        if (!location.protocol || location.protocol === "file:") return;
+        var p = location.pathname;
+        var href;
+        if (p.endsWith("/")) href = p;
+        else if (/\.html?$/i.test(p)) href = p.slice(0, p.lastIndexOf("/") + 1);
+        else href = p + "/";
+        var b = document.createElement("base");
+        b.href = href;
+        document.head.insertBefore(b, document.head.firstChild);
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="M. Zaigham Raza — Senior Unity game developer and team lead. 150+ games delivered. Gameplay systems, multiplayer, and high-performance Unity."
+    />
+    <title>M. Zaigham Raza — Senior Unity Game Developer</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#games">Skip to games</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#" class="logo">Zaigham Portfolio</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#games">Games</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-layout">
+            <div class="hero-photo">
+              <img
+                class="hero-photo-img"
+                src="images/profile.jpg"
+                width="300"
+                height="400"
+                decoding="async"
+                alt="M. Zaigham Raza"
+                onerror="this.onerror=null;this.src='images/profile-placeholder.svg'"
+              />
+            </div>
+            <div class="hero-copy">
+              <p class="hero-role">Senior Unity Game Developer</p>
+              <p class="hero-creds">Team Lead | 150+ Games Delivered</p>
+              <h1 class="hero-title">M. Zaigham Raza</h1>
+              <p class="hero-lead">
+                I build scalable gameplay systems, multiplayer mechanics, and
+                high-performance Unity games.
+                I have worked in the game development industry for 7+ years on 100+
+                projects—delivering for teams, studios, and clients who need reliable
+                execution from prototype through production.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#games">View my work</a>
+                <a class="btn btn-ghost" href="#contact">Get in touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-glow" aria-hidden="true"></div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container">
+          <h2 class="section-title">About</h2>
+          <div class="about-grid">
+            <div class="about-copy">
+              <p class="about-text">
+                I build for studios and teams that need proven execution at scale.
+                With 7+ years in game development and 100+ shipped projects, I
+                specialize in delivering reliable, production-ready systems across
+                gameplay, architecture, and tooling.
+              </p>
+              <p class="about-text">
+                I focus on clear communication, predictable delivery, and building
+                systems that perform under real-world constraints—whether working
+                independently or leading cross-functional teams.
+              </p>
+            </div>
+            <ul class="about-tags" aria-label="Focus areas">
+              <li>Production &amp; Live Game Pipelines</li>
+              <li>Gameplay Systems &amp; Architecture</li>
+              <li>Cross-Discipline Collaboration (Design, Art, Engineering)</li>
+              <li>Client &amp; Studio Delivery</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="project-strip-section"
+        id="project-strip"
+        aria-labelledby="project-strip-heading"
+      >
+        <div class="container project-strip-header">
+          <h2 id="project-strip-heading" class="project-strip-title">
+            Quick access
+          </h2>
+          <p class="project-strip-sub">
+            Explore projects by scrolling horizontally. Hover to preview details or open the store listing in a new tab.
+          </p>
+        </div>
+        <div class="project-strip-bleed">
+          <div
+            class="project-strip-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Shipped projects — horizontal scroll"
+          >
+            <div class="project-strip-track" id="project-strip-track"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="games" class="section games">
+        <div class="container">
+          <h2 class="section-title">Projects Highlight</h2>
+          <p class="section-intro">
+            Live store titles and offline collections—grouped projects whose listings
+            are no longer active. Hover a card for details; collections list every title
+            in the batch.
+          </p>
+          <div id="games-grid" class="games-grid" role="list"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container contact-inner">
+          <h2 class="section-title">Contact</h2>
+          <p class="contact-text">
+            Open to full-time roles, contract work, and studio partnerships.
+            Hiring managers and clients: reach out by email or LinkedIn.
+          </p>
+          <div class="contact-links">
+            <a
+              class="btn btn-primary"
+              href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=razazaigham14@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Email</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://www.linkedin.com/in/zaighamraza14/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="files/M-Zaigham-Raza-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Résumé (PDF)</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>&copy; <span id="year"></span> M. Zaigham Raza. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <p class="site-update" id="site-update" aria-label="Portfolio site revision">
+      Site update 17
+    </p>
+
+    <script src="js/games/init.js"></script>
+    <script src="js/games/perk-tap.js"></script>
+    <script src="js/games/barber-chop.js"></script>
+    <script src="js/games/the-lasgidi-baller.js"></script>
+    <script src="js/games/mighty-noah-bible-runner.js"></script>
+    <script src="js/games/lyrics-star.js"></script>
+    <script src="js/games/havoc-cat.js"></script>
+    <script src="js/games/color-kaboom.js"></script>
+    <script src="js/games/naija-drive.js"></script>
+    <script src="js/games/trippy-trunkz.js"></script>
+    <script src="js/games/bunnigotchi.js"></script>
+    <script src="js/games/mystic-gem-quest.js"></script>
+    <script src="js/games/triple-scoop.js"></script>
+    <script src="js/games/paint-war.js"></script>
+    <script src="js/games/brainrot-survival.js"></script>
+    <script src="js/games/super-ghost.js"></script>
+    <script src="js/games/color-arrow.js"></script>
+    <script src="js/games/warped-steel.js"></script>
+    <script src="js/games/jigsaw-epic-clash.js"></script>
+    <script src="js/games/plant-flow.js"></script>
+    <script src="js/games/split-flap.js"></script>
+    <script src="js/games/florida-boy.js"></script>
+    <script src="js/games/boba-quest.js"></script>
+    <script src="js/collections/collection-elcuh.js"></script>
+    <script src="js/collections/collection-festive-people.js"></script>
+    <script src="js/collections/collection-github-a.js"></script>
+    <script src="js/collections/collection-github-b.js"></script>
+    <script src="js/collections/collection-mangosteen-a.js"></script>
+    <script src="js/collections/collection-shiba.js"></script>
+    <script src="js/collections/collection-bowl-a-coin.js"></script>
+    <script src="js/projects-strip.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
